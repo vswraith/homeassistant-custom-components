@@ -5,6 +5,7 @@ import socket
 import os.path
 import platform
 import subprocess as sp
+import time
 import voluptuous as vol
 import homeassistant.util as util
 import homeassistant.helpers.config_validation as cv
@@ -171,6 +172,9 @@ class BroadlinkIRMediaPlayer(MediaPlayerDevice, RestoreEntity):
                     except socket.timeout:
                         if retry == DEFAULT_RETRY-1:
                             _LOGGER.error("Failed to send packet to Broadlink RM Device")
+                            
+            if len(commands) > 1:
+                time.sleep(.500)
         
     @property
     def name(self):
