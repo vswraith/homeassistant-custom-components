@@ -19,7 +19,7 @@
   **- fan_modes** (Optional*): List of fan modes (default: low, mid, high, auto)<br />
   
 #### Example:
-```
+```yaml
 climate:
   - platform: broadlink
     name: Toyotomi Akira
@@ -59,7 +59,7 @@ climate:
 **power_consumption_threshold** (Optional)<br />
 
 #### Example:
-```
+```yaml
 media_player:
   - platform: broadlink
     name: Master Bedroom TV
@@ -115,7 +115,7 @@ My source 1 = ...|...
   **- speeds** (Optional*): List of supported speeds (default: low, medium, high)<br />
 
 #### Example:
-```
+```yaml
 fan:
   - platform: broadlink
     name: Living Room Fan
