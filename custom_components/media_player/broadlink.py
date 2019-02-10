@@ -27,6 +27,8 @@ REQUIREMENTS = ['broadlink==0.9.0']
 
 _LOGGER = logging.getLogger(__name__)
 
+VERSION = '1.0.0'
+
 CONF_IRCODES_INI = 'ircodes_ini'
 CONF_PING_HOST = 'ping_host'
 CONF_POWER_CONS_SENSOR = 'power_consumption_entity'
