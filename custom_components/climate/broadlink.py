@@ -27,7 +27,7 @@ REQUIREMENTS = ['broadlink==0.9.0']
 
 _LOGGER = logging.getLogger(__name__)
 
-VERSION = '1.1.1'
+VERSION = '1.1.2'
 
 SUPPORT_FLAGS = SUPPORT_TARGET_TEMPERATURE | SUPPORT_OPERATION_MODE | SUPPORT_FAN_MODE | SUPPORT_ON_OFF
 
@@ -295,12 +295,9 @@ class BroadlinkIRClimate(ClimateDevice, RestoreEntity):
         if temperature < self._min_temp or temperature > self._max_temp:
             _LOGGER.warning('The temperature value is out of min/max range') 
             return
+                    
+        self._target_temperature = round(temperature) if self._precision == PRECISION_WHOLE else round(temperature, 1)
         
-        if not round((temperature / self._precision), 2).is_integer():
-            _LOGGER.warning('The temperature value is not acceptable') 
-            return
-            
-        self._target_temperature = round(temperature, 2)
         if not (self._current_operation.lower() == 'off'):
             await self.send_ir()
                 
