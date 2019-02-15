@@ -9,7 +9,7 @@
 **ircodes_ini** (Required): The path of ir codes ini file<br />
 **min_temp** (Optional): Set minimum set point available (default: 16)<br />
 **max_temp** (Optional): Set maximum set point available (default: 30)<br />
-**target_temp_step** (Optional): set target temperature step. (default: 1)<br />
+**precision** (Optional): Set your climate device temperature precision. Supported values are 0.1, 0.5 and 1.0. Τhis value also defines the temperature_step (default: 1)<br />
 **temp_sensor** (Optional): **entity_id** for a temperature sensor, **temp_sensor.state must be temperature.**<br />
 **customize** (Optional): List of options to customize.<br />
   **- operations** (Optional*): List of operation modes (default: auto)<br />
@@ -25,7 +25,7 @@ climate:
     ircodes_ini: 'broadlink_climate_codes/toyotomi_akira.ini'
     min_temp: 16
     max_temp: 30
-    target_temp_step: 1
+    precision: 1
     temp_sensor: sensor.living_room_temperature
     customize:
       operations:
