@@ -1,5 +1,6 @@
 # Custom components for Home Assistant
 ## Broadlink IR Climate Component
+### Obsolete. [Go to the new version](https://github.com/smartHomeHub/SmartIR) (HA 0.88 and earlier)
 
 #### Configuration variables:
 **name** (Optional): Name of climate component<br />
