@@ -1,44 +1,6 @@
 # Custom components for Home Assistant
 ## Broadlink IR Climate Component is obsolete. [Go to the new version](https://github.com/smartHomeHub/SmartIR) (HA 0.88 and earlier)
 
-#### Configuration variables:
-**name** (Optional): Name of climate component<br />
-**host** (Required): The hostname/IP address of the broadlink rm device<br />
-**mac** (Required): The MAC address of the broadlink rm device <br />
-**timeout** (Optional): Timeout in seconds for the connection to the device<br />
-**ircodes_ini** (Required): The path of ir codes ini file<br />
-**min_temp** (Optional): Set minimum set point available (default: 16)<br />
-**max_temp** (Optional): Set maximum set point available (default: 30)<br />
-**precision** (Optional): Set your climate device temperature precision. Supported values are 0.1, 0.5 and 1.0. Τhis value also defines the temperature_step (default: 1.0)<br />
-**temp_sensor** (Optional): **entity_id** for a temperature sensor, **temp_sensor.state must be temperature.**<br />
-**customize** (Optional): List of options to customize.<br />
-  **- operations** (Optional*): List of operation modes (default: auto)<br />
-  **- fan_modes** (Optional*): List of fan modes (default: auto)<br />
-  
-#### Example:
-```yaml
-climate:
-  - platform: broadlink
-    name: Toyotomi Akira
-    host: 192.168.1.85
-    mac: 'BB:BB:BB:BB:BB:BB'
-    ircodes_ini: 'broadlink_climate_codes/toyotomi_akira.ini'
-    min_temp: 16
-    max_temp: 30
-    precision: 1
-    temp_sensor: sensor.living_room_temperature
-    customize:
-      operations:
-        - cool
-        - heat
-      fan_modes:
-        - low
-        - mid
-        - high
-        - auto
-```
-
-
 ## Broadlink IR Media Player
 
 #### Configuration variables:
