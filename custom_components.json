@@ -7,7 +7,7 @@
       "changelog": "https://github.com/vpnmaster/homeassistant-custom-components/releases/latest"
     },
     "Broadlink IR Media Player": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "local_location": "custom_components/media_player/broadlink.py",
       "remote_location": "https://raw.githubusercontent.com/vpnmaster/homeassistant-custom-components/master/custom_components/media_player/broadlink.py",
       "visit_repo": "https://github.com/vpnmaster/homeassistant-custom-components",
